@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Planner
 {
@@ -56,6 +57,25 @@ namespace Planner
             YellowBuilding.Purchase("Eliot Clarke");
             GreenBuilding.Purchase("Heather Cleland");
 
+            City city1 = new City("Nashville");
+
+            List<Building> listOfBuildings = new List<Building>();
+
+            listOfBuildings.Add(FiveOneTwoEigth);
+            listOfBuildings.Add(RedBuilding);
+            listOfBuildings.Add(OrangeBuilding);
+            listOfBuildings.Add(YellowBuilding);
+            listOfBuildings.Add(GreenBuilding);
+
+            city1.buildings = listOfBuildings;
+
+            city1.mayor = "Heather Cleland";
+            city1.est = 1774;
+
+            foreach (Building building in listOfBuildings)
+            {
+                Console.WriteLine($"This building: {building.address} is in {city1.city}");
+            }
         }
     }
 }

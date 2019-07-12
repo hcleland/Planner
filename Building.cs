@@ -3,7 +3,14 @@ using System;
 namespace Planner
 {
     public class Building
+
     {
+        // Private Fields (fields don't have get & set) -------------
+        // private string _designer;
+        // private DateTime _dateConstructed;
+        // private string _address;
+        // private string _owner;
+
         // ----------- Private Properties -------------
         private string _designer { get; set; }
 
@@ -24,6 +31,15 @@ namespace Planner
                 return Width * Height * (3 * Stories);
             }
         }
+        public string Address
+        {
+            get
+            {
+                return address;
+            }
+        }
+
+
         // -------- Constructor -----------
         public Building(string address, string designer)
         {

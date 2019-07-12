@@ -76,6 +76,8 @@ namespace Planner
             {
                 Console.WriteLine($"This building: {building.address} is in {city1.city}");
             }
+
+            Console.WriteLine(FiveOneTwoEigth.address);
         }
     }
 }
